@@ -81,7 +81,7 @@ Tally - Generador de Presupuestos en PDF/
 1. **Ejecución inmediata (Portable):**
    Haz doble clic sobre `outputs\Tally_1.0.0_x64_Portable.exe`.
 2. **Instalación mediante paquete `.msix`:**
-   - Como el paquete está firmado con un certificado de desarrollo autofirmado (`CN=Victoria Sanjurjo`), para instalarlo con doble clic en un equipo nuevo importa primero el certificado `outputs\VictoriaSanjurjo_TallyDev.cer` en el almacén **Entidades de certificación raíz de confianza** (o **Personas de confianza**) del equipo local.
+   - Como el paquete está firmado con un certificado de desarrollo autofirmado con tu Publisher ID (`CN=CF220D35-0C1C-408C-BCB2-E85AA65BC95B`, nombre visible **Victoria Sanjurjo**), para instalarlo con doble clic en un equipo nuevo importa primero el certificado `outputs\VictoriaSanjurjo_TallyDev.cer` en el almacén **Entidades de certificación raíz de confianza** (o **Personas de confianza**) del equipo local.
    - Luego abre `outputs\Tally_1.0.0_x64.msix` y haz clic en **Instalar**.
 
 ### Opción B: Compilar y Probar desde el Código Fuente

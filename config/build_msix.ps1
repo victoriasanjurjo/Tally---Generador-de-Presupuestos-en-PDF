@@ -29,7 +29,7 @@ Copy-Item "assets\Square150x150Logo.png" "$stagingDir\Assets\Square150x150Logo.p
 Copy-Item "assets\Wide310x150Logo.png" "$stagingDir\Assets\Wide310x150Logo.png" -Force
 Copy-Item "assets\StoreLogo.png" "$stagingDir\Assets\StoreLogo.png" -Force
 
-# 2. Generar certificado de desarrollo autofirmado (CN=Victoria Sanjurjo)
+# 2. Generar certificado de desarrollo autofirmado (CN=CF220D35-0C1C-408C-BCB2-E85AA65BC95B)
 $certDir = "config\certs"
 New-Item -ItemType Directory -Force -Path $certDir | Out-Null
 $pfxPath = "$certDir\VictoriaSanjurjo_TallyDev.pfx"
@@ -39,7 +39,7 @@ $securePwd = ConvertTo-SecureString -String $passwordPlain -Force -AsPlainText
 
 $cert = New-SelfSignedCertificate `
     -Type Custom `
-    -Subject "CN=Victoria Sanjurjo" `
+    -Subject "CN=CF220D35-0C1C-408C-BCB2-E85AA65BC95B" `
     -KeyUsage DigitalSignature `
     -FriendlyName "Tally MSIX Developer Certificate - Victoria Sanjurjo" `
     -CertStoreLocation "Cert:\CurrentUser\My" `
