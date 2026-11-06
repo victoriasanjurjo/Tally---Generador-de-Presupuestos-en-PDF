@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tally — Generador de Presupuestos en PDF</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-block">
+      <div class="brand-logo" aria-hidden="true">
+        <span class="logo-bar"></span>
+        <span class="logo-lines"></span>
+      </div>
+      <div>
+        <h1>Tally</h1>
+        <p class="subtitle">Generador de Presupuestos en PDF &bull; 100% Local y Privado</p>
+      </div>
+    </div>
+    <div class="privacy-pill" title="Sin registro, sin telemetría, sin conexión a servidores externos">
+      <span aria-hidden="true">🔒</span> Ejecución 100% Local &bull; Sin Telemetría
+    </div>
+  </header>
+
+  <main class="main-container">
+    <form id="quote-form" novalidate>
+      <!-- SECCIÓN 1: METADATOS DEL PRESUPUESTO -->
+      <section class="card meta-card" aria-labelledby="meta-heading">
+        <div class="card-header">
+          <h2 id="meta-heading">1. Datos de Emisión y Vigencia</h2>
+          <span class="badge">Autogenerado y editable</span>
+        </div>
+        <div class="meta-grid">
+          <div class="field">
+            <label for="quote-number">N.° / Código de Presupuesto <span class="req" aria-hidden="true">*</span></label>
+            <span id="quote-number-hint" class="hint">Ej. PRES-0001</span>
+            <input
+              type="text"
+              id="quote-number"
+              name="quote_number"
+              required
+              maxlength="24"
+              value="PRES-0001"
+              aria-describedby="quote-number-hint"
+              aria-errormessage="quote-number-err"
+            />
+            <div id="quote-number-err" class="error-msg">
+              <span aria-hidden="true">❌</span> Ingrese el código del presupuesto.
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="issue-date">Fecha de Emisión <span class="req" aria-hidden="true">*</span></label>
+            <span id="issue-date-hint" class="hint">Formato: DD/MM/AAAA</span>
+            <input
+              type="text"
+              id="issue-date"
+              name="issue_date"
+              required
+              maxlength="20"
+              aria-describedby="issue-date-hint"
+              aria-errormessage="issue-date-err"
+            />
+            <div id="issue-date-err" class="error-msg">
+              <span aria-hidden="true">❌</span> Ingrese la fecha de emisión.
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="validity">Vigencia del Presupuesto <span class="req" aria-hidden="true">*</span></label>
+            <span id="validity-hint" class="hint">Ej. 15 días hábiles / 30 días</span>
+            <input
+              type="text"
+              id="validity"
+              name="validity"
+              required
+              maxlength="45"
+              value="15 días hábiles"
+              aria-describedby="validity-hint"
+              aria-errormessage="validity-err"
+            />
+            <div id="validity-err" class="error-msg">
+              <span aria-hidden="true">❌</span> Especifique el plazo de vigencia.
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="currency">Símbolo de Moneda <span class="req" aria-hidden="true">*</span></label>
+            <span id="currency-hint" class="hint">Ej. $, USD, ARS, €</span>
+            <input
+              type="text"
+              id="currency"
+              name="currency"
+              required
+              maxlength="8"
+              value="$"
+              aria-describedby="currency-hint"
+              aria-errormessage="currency-err"
+            />
+            <div id="currency-err" class="error-msg">
+              <span aria-hidden="true">❌</span> Indique el símbolo monetario.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 2: PROFESIONAL Y CLIENTE -->
+      <div class="parties-grid">
+        <!-- DATOS DEL PROFESIONAL -->
+        <section class="card party-card" aria-labelledby="prof-heading">
+          <div class="card-header">
+            <h2 id="prof-heading">2. Datos del Profesional</h2>
+            <span class="badge">Emisor</span>
+          </div>
+          <div class="form-grid-2">
+            <div class="field">
+              <label for="prof-first-name">Nombre <span class="req" aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="prof-first-name"
+                name="prof_first_name"
+                required
+                maxlength="40"
+                placeholder="Ej. Victoria"
+                aria-errormessage="prof-first-name-err"
+              />
+              <div id="prof-first-name-err" class="error-msg">
+                <span aria-hidden="true">❌</span> El nombre del profesional es obligatorio.
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="prof-last-name">Apellido <span class="req" aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="prof-last-name"
+                name="prof_last_name"
+                required
+                maxlength="40"
+                placeholder="Ej. Sanjurjo"
+                aria-errormessage="prof-last-name-err"
+              />
+              <div id="prof-last-name-err" class="error-msg">
+                <span aria-hidden="true">❌</span> El apellido del profesional es obligatorio.
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="prof-phone">Número de Teléfono <span class="req" aria-hidden="true">*</span></label>
+              <span id="prof-phone-hint" class="hint">Ej. +54 11 5555-0100</span>
+              <input
+                type="tel"
+                id="prof-phone"
+                name="prof_phone"
+                required
+                maxlength="32"
+                placeholder="+54 11 ..."
+                aria-describedby="prof-phone-hint"
+                aria-errormessage="prof-phone-err"
+              />
+              <div id="prof-phone-err" class="error-msg">
+                <span aria-hidden="true">❌</span> Ingrese un teléfono de contacto válido.
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="prof-email">Correo Electrónico <span class="req" aria-hidden="true">*</span></label>
+              <span id="prof-email-hint" class="hint">Formato: nombre@dominio.com</span>
+              <input
+                type="email"
+                id="prof-email"
+                name="prof_email"
+                required
+                maxlength="60"
+                placeholder="profesional@correo.com"
+                aria-describedby="prof-email-hint"
+                aria-errormessage="prof-email-err"
+              />
+              <div id="prof-email-err" class="error-msg">
+                <span aria-hidden="true">❌</span> Ingrese un correo electrónico válido.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- DATOS DEL CLIENTE -->
+        <section class="card party-card" aria-labelledby="client-heading">
+          <div class="card-header">
+            <h2 id="client-heading">3. Datos del Cliente</h2>
+            <span class="badge badge-secondary">Destinatario</span>
+          </div>
+          <div class="form-grid-2">
+            <div class="field">
+              <label for="client-first-name">Nombre <span class="req" aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="client-first-name"
+                name="client_first_name"
+                required
+                maxlength="40"
+                placeholder="Ej. Martín"
+                aria-errormessage="client-first-name-err"
+              />
+              <div id="client-first-name-err" class="error-msg">
+                <span aria-hidden="true">❌</span> El nombre del cliente es obligatorio.
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="client-last-name">Apellido <span class="req" aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="client-last-name"
+                name="client_last_name"
+                required
+                maxlength="40"
+                placeholder="Ej. Gómez"
+                aria-errormessage="client-last-name-err"
+              />
+              <div id="client-last-name-err" class="error-msg">
+                <span aria-hidden="true">❌</span> El apellido del cliente es obligatorio.
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="client-phone">Número de Teléfono <span class="req" aria-hidden="true">*</span></label>
+              <span id="client-phone-hint" class="hint">Ej. +54 11 4444-0200</span>
+              <input
+                type="tel"
+                id="client-phone"
+                name="client_phone"
+                required
+                maxlength="32"
+                placeholder="+54 11 ..."
+                aria-describedby="client-phone-hint"
+                aria-errormessage="client-phone-err"
+              />
+              <div id="client-phone-err" class="error-msg">
+                <span aria-hidden="true">❌</span> Ingrese el teléfono del cliente.
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="client-email">Correo Electrónico <span class="req" aria-hidden="true">*</span></label>
+              <span id="client-email-hint" class="hint">Formato: cliente@dominio.com</span>
+              <input
+                type="email"
+                id="client-email"
+                name="client_email"
+                required
+                maxlength="60"
+                placeholder="cliente@correo.com"
+                aria-describedby="client-email-hint"
+                aria-errormessage="client-email-err"
+              />
+              <div id="client-email-err" class="error-msg">
+                <span aria-hidden="true">❌</span> Ingrese un correo electrónico válido.
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- SECCIÓN 3: LISTA DE PRODUCTOS / SERVICIOS (ENTRE 3 Y 10) -->
+      <section class="card items-card" aria-labelledby="items-heading">
+        <div class="card-header items-header">
+          <div>
+            <h2 id="items-heading">4. Lista de Productos o Servicios</h2>
+            <p class="section-note">
+              Mínimo <strong>3</strong> y máximo <strong>10</strong> productos. Los subtotales y el total se calculan automáticamente al ingresar cantidad y precio.
+            </p>
+          </div>
+          <div class="items-actions">
+            <span id="items-counter" class="counter-pill" aria-live="polite">3 / 10 productos</span>
+            <button type="button" id="btn-add-item" class="btn btn-outline">
+              + Agregar Producto
+            </button>
+          </div>
+        </div>
+
+        <div tabindex="0" role="region" aria-labelledby="items-table-caption" class="table-wrapper">
+          <table id="items-table">
+            <caption id="items-table-caption" class="sr-only">
+              Detalle de productos o servicios del presupuesto (entre 3 y 10 ítems)
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col" class="col-index">#</th>
+                <th scope="col" class="col-desc">Producto / Servicio <span class="req" aria-hidden="true">*</span></th>
+                <th scope="col" class="col-qty">Cantidad <span class="req" aria-hidden="true">*</span></th>
+                <th scope="col" class="col-price">Precio Unitario <span class="req" aria-hidden="true">*</span></th>
+                <th scope="col" class="col-subtotal">Subtotal</th>
+                <th scope="col" class="col-action">Acción</th>
+              </tr>
+            </thead>
+            <tbody id="items-tbody">
+              <!-- Filas generadas dinámicamente por main.js (mínimo 3, máximo 10) -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="summary-bar">
+          <div class="summary-note">
+            <span>Vigencia declarada: <strong id="summary-validity-preview">15 días hábiles</strong></span>
+          </div>
+          <div class="grand-total-box" aria-live="polite">
+            <span class="grand-total-label">TOTAL DEL PRESUPUESTO</span>
+            <span id="grand-total-value" class="grand-total-amount">$ 0,00</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- BANNER DE ESTADO Y BOTONES DE ACCIÓN -->
+      <div id="status-banner" class="status-banner hidden" role="status" aria-live="polite"></div>
+
+      <footer class="actions-footer">
+        <div class="secondary-actions">
+          <button type="button" id="btn-demo-data" class="btn btn-ghost">
+            Cargar Ejemplo Rápido
+          </button>
+          <button type="button" id="btn-clear-form" class="btn btn-ghost">
+            Limpiar Formulario
+          </button>
+        </div>
+        <button type="submit" id="btn-generate-pdf" class="btn btn-primary">
+          Generar y Descargar Presupuesto en PDF
+        </button>
+      </footer>
+    </form>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
+

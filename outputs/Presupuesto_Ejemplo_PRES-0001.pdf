@@ -1,0 +1,92 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Length 4493 >>
+stream
+0.902 0.224 0.275 rg 0.00 833.89 595.28 8.00 re f
+0.114 0.208 0.341 rg 40.00 745.00 515.28 68.00 re f
+BT /F2 22.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 58.00 782.00 Tm (PRESUPUESTO COMERCIAL) Tj ET
+BT /F1 10.0 Tf 0.820 0.875 0.937 rg 1 0 0 1 58.00 762.00 Tm (Documento generado localmente con Tally) Tj ET
+BT /F2 13.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 445.96 785.00 Tm (N.\260 PRES-0001) Tj ET
+BT /F1 9.5 Tf 0.880 0.920 0.960 rg 1 0 0 1 404.81 764.00 Tm (Fecha de emisi\363n: 06/11/2026) Tj ET
+0.945 0.961 0.976 rg 40.00 712.00 515.28 24.00 re f
+0.60 w 0.796 0.835 0.882 RG 40.00 712.00 515.28 24.00 re S
+BT /F2 9.5 Tf 0.114 0.208 0.341 rg 1 0 0 1 52.00 720.50 Tm (Vigencia del presupuesto: 15 d\355as h\341biles) Tj ET
+BT /F2 9.5 Tf 0.114 0.208 0.341 rg 1 0 0 1 498.39 720.50 Tm (Moneda: $) Tj ET
+0.973 0.980 0.988 rg 40.00 598.00 250.00 102.00 re f
+0.70 w 0.796 0.835 0.882 RG 40.00 598.00 250.00 102.00 re S
+0.271 0.482 0.616 rg 40.00 678.00 250.00 22.00 re f
+BT /F2 9.5 Tf 1.000 1.000 1.000 rg 1 0 0 1 50.00 685.50 Tm (DATOS DEL PROFESIONAL) Tj ET
+BT /F2 11.0 Tf 0.118 0.161 0.231 rg 1 0 0 1 50.00 658.00 Tm (Victoria Sanjurjo) Tj ET
+BT /F1 9.5 Tf 0.392 0.455 0.545 rg 1 0 0 1 50.00 638.00 Tm (Tel: +54 11 5555-0100) Tj ET
+BT /F1 9.5 Tf 0.392 0.455 0.545 rg 1 0 0 1 50.00 618.00 Tm (Email: victoria.sanjurjo@profesional.com) Tj ET
+0.973 0.980 0.988 rg 305.28 598.00 250.00 102.00 re f
+0.70 w 0.796 0.835 0.882 RG 305.28 598.00 250.00 102.00 re S
+0.271 0.482 0.616 rg 305.28 678.00 250.00 22.00 re f
+BT /F2 9.5 Tf 1.000 1.000 1.000 rg 1 0 0 1 315.28 685.50 Tm (DATOS DEL CLIENTE) Tj ET
+BT /F2 11.0 Tf 0.118 0.161 0.231 rg 1 0 0 1 315.28 658.00 Tm (Alejandro Mendoza) Tj ET
+BT /F1 9.5 Tf 0.392 0.455 0.545 rg 1 0 0 1 315.28 638.00 Tm (Tel: +54 11 4789-3321) Tj ET
+BT /F1 9.5 Tf 0.392 0.455 0.545 rg 1 0 0 1 315.28 618.00 Tm (Email: amendoza@empresa-cliente.com) Tj ET
+0.114 0.208 0.341 rg 40.00 550.00 515.28 26.00 re f
+BT /F2 9.5 Tf 1.000 1.000 1.000 rg 1 0 0 1 48.00 559.00 Tm (#) Tj ET
+BT /F2 9.5 Tf 1.000 1.000 1.000 rg 1 0 0 1 75.00 559.00 Tm (DESCRIPCI\323N DEL PRODUCTO / SERVICIO) Tj ET
+BT /F2 9.5 Tf 1.000 1.000 1.000 rg 1 0 0 1 336.50 559.00 Tm (CANT.) Tj ET
+BT /F2 9.5 Tf 1.000 1.000 1.000 rg 1 0 0 1 392.68 559.00 Tm (PRECIO UNIT.) Tj ET
+BT /F2 9.5 Tf 1.000 1.000 1.000 rg 1 0 0 1 493.32 559.00 Tm (SUBTOTAL) Tj ET
+0.50 w 0.850 0.880 0.920 RG 40.00 524.00 m 555.28 524.00 l S
+BT /F2 9.5 Tf 0.392 0.455 0.545 rg 1 0 0 1 48.00 532.50 Tm (01) Tj ET
+BT /F1 10.0 Tf 0.118 0.161 0.231 rg 1 0 0 1 75.00 532.50 Tm (Dise\361o de arquitectura y prototipado de interfa?) Tj ET
+BT /F1 10.0 Tf 0.118 0.161 0.231 rg 1 0 0 1 359.40 532.50 Tm (1) Tj ET
+BT /F1 10.0 Tf 0.118 0.161 0.231 rg 1 0 0 1 396.20 532.50 Tm ($ 185.000,00) Tj ET
+BT /F2 10.0 Tf 0.118 0.161 0.231 rg 1 0 0 1 486.20 532.50 Tm ($ 185.000,00) Tj ET
+0.973 0.980 0.988 rg 40.00 498.00 515.28 26.00 re f
+0.50 w 0.850 0.880 0.920 RG 40.00 498.00 m 555.28 498.00 l S
+BT /F2 9.5 Tf 0.392 0.455 0.545 rg 1 0 0 1 48.00 506.50 Tm (02) Tj ET
+BT /F1 10.0 Tf 0.118 0.161 0.231 rg 1 0 0 1 75.00 506.50 Tm (Desarrollo de aplicaci\363n de escritorio nativa \(?) Tj ET
+BT /F1 10.0 Tf 0.118 0.161 0.231 rg 1 0 0 1 359.40 506.50 Tm (1) Tj ET
+BT /F1 10.0 Tf 0.118 0.161 0.231 rg 1 0 0 1 396.20 506.50 Tm ($ 420.000,00) Tj ET
+BT /F2 10.0 Tf 0.118 0.161 0.231 rg 1 0 0 1 486.20 506.50 Tm ($ 420.000,00) Tj ET
+0.50 w 0.850 0.880 0.920 RG 40.00 472.00 m 555.28 472.00 l S
+BT /F2 9.5 Tf 0.392 0.455 0.545 rg 1 0 0 1 48.00 480.50 Tm (03) Tj ET
+BT /F1 10.0 Tf 0.118 0.161 0.231 rg 1 0 0 1 75.00 480.50 Tm (Empaquetado MSIX firmado y documentaci\363n t\351cnic?) Tj ET
+BT /F1 10.0 Tf 0.118 0.161 0.231 rg 1 0 0 1 359.40 480.50 Tm (1) Tj ET
+BT /F1 10.0 Tf 0.118 0.161 0.231 rg 1 0 0 1 401.80 480.50 Tm ($ 95.000,00) Tj ET
+BT /F2 10.0 Tf 0.118 0.161 0.231 rg 1 0 0 1 491.80 480.50 Tm ($ 95.000,00) Tj ET
+0.80 w 0.796 0.835 0.882 RG 40.00 472.00 515.28 104.00 re S
+0.114 0.208 0.341 rg 335.28 418.00 220.00 38.00 re f
+BT /F2 12.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 348.00 432.00 Tm (TOTAL) Tj ET
+BT /F2 14.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 462.68 431.50 Tm ($ 700.000,00) Tj ET
+0.70 w 0.796 0.835 0.882 RG 40.00 68.00 m 555.28 68.00 l S
+BT /F1 8.5 Tf 0.392 0.455 0.545 rg 1 0 0 1 40.00 52.00 Tm (Presupuesto PRES-0001 \227 Validez: 15 d\355as h\341biles. Los precios expresados corresponden al total final acordado.) Tj ET
+BT /F1 8.0 Tf 0.550 0.600 0.680 rg 1 0 0 1 40.00 38.00 Tm (Generado de forma 100% local con Tally \(Desarrollado por Victoria Sanjurjo\).) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000263 00000 n 
+0000000360 00000 n 
+0000000462 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+5006
+%%EOF

@@ -1,0 +1,10 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Permisos mínimos locales para Tally (solo ventana principal e invocación IPC local)",
+  "windows": ["main"],
+  "permissions": [
+    "core:default"
+  ]
+}
+

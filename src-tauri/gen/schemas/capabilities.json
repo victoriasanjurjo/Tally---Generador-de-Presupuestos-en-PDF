@@ -1,0 +1,1 @@
+{"default":{"identifier":"default","description":"Permisos mínimos locales para Tally (solo ventana principal e invocación IPC local)","local":true,"windows":["main"],"permissions":["core:default"]}}

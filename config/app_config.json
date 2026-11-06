@@ -1,0 +1,19 @@
+{
+  "app_name": "Tally - Generador de Presupuestos en PDF",
+  "version": "1.0.0",
+  "developer": "Victoria Sanjurjo",
+  "defaults": {
+    "quote_prefix": "PRES-",
+    "default_currency": "$",
+    "default_validity": "15 días hábiles",
+    "min_items": 3,
+    "max_items": 10
+  },
+  "privacy": {
+    "telemetry": false,
+    "network_access": false,
+    "account_required": false,
+    "local_only": true
+  }
+}
+

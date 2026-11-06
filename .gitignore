@@ -1,0 +1,22 @@
+# Rust & Cargo
+target/
+**/target/
+Cargo.lock
+
+# Node & Frontend
+node_modules/
+
+# Certificados privados temporales (se conservan los paquetes finales o se regeneran)
+config/certs/*.pfx
+config/certs/*.pvk
+
+# Archivos temporales de empaquetado MSIX
+msix_staging/
+
+# Sistema Operativo e IDEs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
