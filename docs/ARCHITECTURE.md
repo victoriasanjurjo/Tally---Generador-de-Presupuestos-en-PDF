@@ -83,6 +83,6 @@ Al implementar un generador directo del estándar **ISO 32000-1 (PDF 1.4)** en `
 ## 5. Empaquetado Windows MSIX y Firma Digital
 
 Para distribuir la aplicación en Windows como un paquete `.msix` instalable:
-1. Se definió el manifiesto `config/AppxManifest.xml` con identidad `VictoriaSanjurjo.TallyPresupuestos`, `Publisher="CN=CF220D35-0C1C-408C-BCB2-E85AA65BC95B"` y `PublisherDisplayName="Victoria Sanjurjo"`.
+1. Se definió el manifiesto `config/AppxManifest.xml` con identidad `VictoriaSanjurjo.Tally-GeneradordePresupuestosenPD`, `Publisher="CN=CF220D35-0C1C-408C-BCB2-E85AA65BC95B"` y `PublisherDisplayName="Victoria Sanjurjo"`.
 2. El script automatizado `config/build_msix.ps1` genera los activos visuales requeridos (`Square44x44Logo.png`, `Square150x150Logo.png`, `Wide310x150Logo.png`, `StoreLogo.png`), empaqueta el ejecutable compilado en modo `release` (`lto = true`, `strip = true`) mediante `makeappx.exe` del Windows 10/11 SDK y lo firma con `signtool.exe` (SHA-256) usando un certificado de desarrollo autofirmado emitido con `Subject="CN=CF220D35-0C1C-408C-BCB2-E85AA65BC95B"` a nombre de **Victoria Sanjurjo**.
 

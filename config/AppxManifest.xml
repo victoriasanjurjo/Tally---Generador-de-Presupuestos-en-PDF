@@ -6,7 +6,7 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="VictoriaSanjurjo.TallyPresupuestos"
+    Name="VictoriaSanjurjo.Tally-GeneradordePresupuestosenPD"
     Publisher="CN=CF220D35-0C1C-408C-BCB2-E85AA65BC95B"
     Version="1.0.0.0"
     ProcessorArchitecture="x64" />
